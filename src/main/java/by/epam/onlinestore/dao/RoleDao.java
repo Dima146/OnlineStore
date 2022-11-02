@@ -1,7 +1,6 @@
 package by.epam.onlinestore.dao;
 
 import by.epam.onlinestore.bean.Role;
-import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
 import java.util.Optional;
 
 public interface RoleDao {
@@ -27,5 +26,5 @@ public interface RoleDao {
      *
      * @param role to save
      */
-    long saveRole(Role role) throws DaoException, ConnectionPoolException;
+    long saveRole(Role role) throws DaoException;
 }
