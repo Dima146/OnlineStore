@@ -22,15 +22,12 @@ public class AddInBasketCommand implements Command {
     private static final Logger logger = LogManager.getLogger(AddInBasketCommand.class);
 
     private static final String ERROR_PAGE = "WEB-INF/view/error.jsp";
-
     private static final String PAGE = "command=catalog";
-
     private static final String ERROR = "error";
 
     private static final String CATEGORY_ID_PARAMETER = "&categoryId=";
     private static final String MESSAGE_PARAMETER = "&message=";
     private static final String USER = "user";
-
     private static final String PRODUCT_ID = "productId";
     private static final String QUANTITY = "quantity";
     private static final String OK = "ok";

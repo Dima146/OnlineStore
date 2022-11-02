@@ -29,7 +29,6 @@ public class LogInCommand implements Command {
     private static final String LOGIN_PAGE = "WEB-INF/view/login.jsp";
     private static final String PROFILE_PAGE = "command=profile";
 
-
     private static final String PASSWORD_PARAMETER = "password";
     private static final String EMAIL_PARAMETER = "email";
     private static final String USER = "user";

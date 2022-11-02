@@ -25,7 +25,6 @@ public class GoToContactsPageCommand implements Command {
 
     private static final String CONTACT_PAGE = "WEB-INF/view/contacts.jsp";
     private static final String ERROR_PAGE = "WEB-INF/view/error.jsp";
-
     private static final String PRODUCT_CATEGORIES = "categories";
 
     @Override
