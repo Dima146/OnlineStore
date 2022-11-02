@@ -1,4 +1,4 @@
-package by.epam.onlinestore.dao.mapper;
+package by.epam.onlinestore.dao.creator;
 
 import by.epam.onlinestore.bean.Bean;
 
@@ -12,7 +12,7 @@ import java.sql.SQLException;
  */
 
 @FunctionalInterface
-public interface Mapper <T extends Bean> {
+public interface Creator<T extends Bean> {
 
-    T map(ResultSet resultSet) throws SQLException;
+    T create(ResultSet resultSet) throws SQLException;
 }

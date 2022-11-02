@@ -65,7 +65,7 @@ public class AddInBasketCommand implements Command {
                                         CommandResultType.REDIRECT);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Error while adding product in basket");
+            logger.log(Level.ERROR, "Error while adding product in basket", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
     }

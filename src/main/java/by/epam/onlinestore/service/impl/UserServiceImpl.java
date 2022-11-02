@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
             return userDao.findUserByEmailAndPassword(email, password);
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to log in user");
+            logger.log(Level.ERROR, "Impossible to log in user", exception);
             throw new ServiceException(exception);
         }
 
@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
             return user;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve User by ID");
+            logger.log(Level.ERROR, "Impossible to retrieve User by ID", exception);
             throw new ServiceException(exception);
         }
     }
@@ -78,7 +78,7 @@ public class UserServiceImpl implements UserService {
             }
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve users from orders");
+            logger.log(Level.ERROR, "Impossible to retrieve users from orders", exception);
             throw new ServiceException(exception);
         }
         return userList;
@@ -118,7 +118,7 @@ public class UserServiceImpl implements UserService {
             return true;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to register new user");
+            logger.log(Level.ERROR, "Impossible to register new user", exception);
             throw new ServiceException(exception);
         }
     }

@@ -46,7 +46,7 @@ public class GoToCatalogPageCommand implements Command {
             requestContext.addRequestAttribute(PRODUCTS, products);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR,"Error while going to catalog page");
+            logger.log(Level.ERROR,"Error while going to catalog page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

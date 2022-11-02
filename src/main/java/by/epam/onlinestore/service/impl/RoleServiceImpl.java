@@ -27,7 +27,7 @@ public class RoleServiceImpl implements RoleService {
             userRole = roleDao.findRoleById(roleId);
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve User role by ID");
+            logger.log(Level.ERROR, "Impossible to retrieve User role by ID", exception);
             throw new ServiceException(exception);
         }
         return userRole;

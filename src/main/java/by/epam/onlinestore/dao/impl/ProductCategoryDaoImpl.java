@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.ProductCategoryDao;
 import by.epam.onlinestore.dao.TableLabel;
-import by.epam.onlinestore.dao.mapper.MapperFactory;
+import by.epam.onlinestore.dao.creator.CreatorFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public class ProductCategoryDaoImpl extends AbstractSqlExecutor<ProductCategory>
 
 
     public ProductCategoryDaoImpl() {
-        super(MapperFactory.getInstance().getProductCategoryMapper(), TableLabel.PRODUCT_CATEGORY);
+        super(CreatorFactory.getInstance().getProductCategoryMapper(), TableLabel.PRODUCT_CATEGORY);
     }
 
     @Override

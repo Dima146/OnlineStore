@@ -35,7 +35,7 @@ public class BankCardServiceImpl implements BankCardService {
                 }
             }
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to check bank card");
+            logger.log(Level.ERROR, "Impossible to check bank card", exception);
             throw new ServiceException(exception);
         }
 
@@ -69,7 +69,7 @@ public class BankCardServiceImpl implements BankCardService {
             }
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to pay");
+            logger.log(Level.ERROR, "Impossible to pay", exception);
             throw new ServiceException(exception);
         }
 

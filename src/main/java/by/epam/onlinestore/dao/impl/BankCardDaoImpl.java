@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.BankCardDao;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.TableLabel;
-import by.epam.onlinestore.dao.mapper.MapperFactory;
+import by.epam.onlinestore.dao.creator.CreatorFactory;
 
 import java.util.Optional;
 
@@ -18,7 +18,7 @@ public class BankCardDaoImpl extends AbstractSqlExecutor<BankCard> implements Ba
 
 
     public BankCardDaoImpl() {
-        super(MapperFactory.getInstance().getBankCardMapper(), TableLabel.BANK_CARD);
+        super(CreatorFactory.getInstance().getBankCardMapper(), TableLabel.BANK_CARD);
     }
 
 

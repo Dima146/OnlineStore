@@ -36,7 +36,7 @@ public class GoToAddProductPageCommand implements Command {
             requestContext.addRequestAttribute(PRODUCT_CATEGORIES, categories);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Error while going to add product page");
+            logger.log(Level.ERROR, "Error while going to add product page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

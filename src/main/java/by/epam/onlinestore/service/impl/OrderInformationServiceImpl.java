@@ -32,7 +32,7 @@ public class OrderInformationServiceImpl implements by.epam.onlinestore.service.
             return orderInformation;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to retrieve order information by ID");
+            logger.log(Level.ERROR,"Impossible to retrieve order information by ID", exception);
             throw new ServiceException(exception);
         }
     }
@@ -46,7 +46,7 @@ public class OrderInformationServiceImpl implements by.epam.onlinestore.service.
             orderInformation = orderInformationDao.findOrderInformationByStatus(orderStatus);
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to retrieve order information by status");
+            logger.log(Level.ERROR,"Impossible to retrieve order information by status", exception);
             throw new ServiceException(exception);
         }
         return orderInformation;
@@ -67,7 +67,7 @@ public class OrderInformationServiceImpl implements by.epam.onlinestore.service.
             return true;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to update order status by ID ");
+            logger.log(Level.ERROR,"Impossible to update order status by ID", exception);
             throw new ServiceException(exception);
         }
     }
@@ -96,7 +96,7 @@ public class OrderInformationServiceImpl implements by.epam.onlinestore.service.
             return ordersInformation;
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR,"Impossible to retrieve order information from orders from user");
+            logger.log(Level.ERROR,"Impossible to retrieve order information from orders from user", exception);
             throw new ServiceException(exception);
         }
 
@@ -155,10 +155,10 @@ public class OrderInformationServiceImpl implements by.epam.onlinestore.service.
             return true;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to add new order information");
+            logger.log(Level.ERROR, "Impossible to add new order information", exception);
             throw new ServiceException(exception);
         } catch (ParseException exception) {
-            logger.log(Level.ERROR, "Error while parsing Date in attempt to add new order information");
+            logger.log(Level.ERROR, "Error while parsing Date in attempt to add new order information", exception);
             throw new ServiceException(exception);
         }
     }

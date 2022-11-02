@@ -38,7 +38,7 @@ public class GoToContactsPageCommand implements Command {
             requestContext.addRequestAttribute(PRODUCT_CATEGORIES, categories);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR,"Error while going to contacts page");
+            logger.log(Level.ERROR,"Error while going to contacts page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

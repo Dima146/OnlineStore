@@ -38,7 +38,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
             return orderFromUserList;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve OrderFromUser by User ID without OrderInformation");
+            logger.log(Level.ERROR, "Impossible to retrieve OrderFromUser by User ID without OrderInformation", exception);
             throw new ServiceException(exception);
         }
     }
@@ -54,7 +54,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
             return orderFromUserList;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve OrderFromUser by User ID");
+            logger.log(Level.ERROR, "Impossible to retrieve OrderFromUser by User ID", exception);
             throw new ServiceException(exception);
         }
     }
@@ -80,7 +80,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
             return orderFromUserList;
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve orders from User by User where product status = true");
+            logger.log(Level.ERROR, "Impossible to retrieve orders from User by User where product status = true", exception);
             throw new ServiceException(exception);
         }
     }
@@ -97,7 +97,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
             return orderFromUserList;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve orders from User by order information ID");
+            logger.log(Level.ERROR, "Impossible to retrieve orders from User by order information ID", exception);
             throw new ServiceException(exception);
         }
 
@@ -117,7 +117,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
             return true;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to remove order by order from user ID");
+            logger.log(Level.ERROR,"Impossible to remove order by order from user ID", exception);
             throw new ServiceException(exception);
         }
     }
@@ -140,7 +140,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
             return true;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to add new order");
+            logger.log(Level.ERROR,"Impossible to add new order", exception);
             throw new ServiceException(exception);
         }
     }
@@ -160,7 +160,7 @@ public class OrderFromUserServiceImpl implements OrderFromUserService {
                 }
             }
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to calculate cost");
+            logger.log(Level.ERROR, "Impossible to calculate cost", exception);
             throw new ServiceException(exception);
         }
         return cost;

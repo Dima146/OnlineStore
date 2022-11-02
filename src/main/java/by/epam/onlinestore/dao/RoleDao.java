@@ -1,7 +1,7 @@
 package by.epam.onlinestore.dao;
 
 import by.epam.onlinestore.bean.Role;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPoolException;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
 import java.util.Optional;
 
 public interface RoleDao {

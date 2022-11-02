@@ -56,7 +56,7 @@ public class GoToEditProductPageCommand implements Command {
                 }
             }
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR,"Error while going to edit product page");
+            logger.log(Level.ERROR,"Error while going to edit product page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

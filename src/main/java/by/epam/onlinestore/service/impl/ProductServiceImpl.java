@@ -37,7 +37,7 @@ public class ProductServiceImpl implements ProductService {
             return product;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve Product by ID");
+            logger.log(Level.ERROR, "Impossible to retrieve Product by ID", exception);
             throw new ServiceException(exception);
         }
     }
@@ -53,7 +53,7 @@ public class ProductServiceImpl implements ProductService {
             return productList;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve Product by product Category ID");
+            logger.log(Level.ERROR, "Impossible to retrieve Product by product Category ID", exception);
             throw new ServiceException(exception);
 
         }
@@ -105,7 +105,7 @@ public class ProductServiceImpl implements ProductService {
             return true;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to add  new product");
+            logger.log(Level.ERROR,"Impossible to add  new product", exception);
             throw new ServiceException(exception);
         }
 
@@ -141,7 +141,7 @@ public class ProductServiceImpl implements ProductService {
             productDao.updateProductById(longProductId, product);
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to update Product information");
+            logger.log(Level.ERROR,"Impossible to update Product information", exception);
             throw new ServiceException(exception);
         }
 
@@ -179,7 +179,7 @@ public class ProductServiceImpl implements ProductService {
             return productCategoryId;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR,"Impossible to retrieve product Category ID");
+            logger.log(Level.ERROR,"Impossible to retrieve product Category ID", exception);
             throw new ServiceException(exception);
         }
 

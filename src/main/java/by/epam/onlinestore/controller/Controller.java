@@ -4,8 +4,8 @@ import by.epam.onlinestore.controller.command.Command;
 import by.epam.onlinestore.controller.command.CommandFactory;
 import by.epam.onlinestore.controller.command.CommandResult;
 import by.epam.onlinestore.controller.context.RequestContextHelper;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPool;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPoolException;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPool;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -58,8 +58,8 @@ public class Controller extends HttpServlet {
             ConnectionPool.getInstance().dispose();
             super.destroy();
 
-        } catch (Exception e) {
-            logger.log(Level.ERROR,"Servlet has not been destroyed");
+        } catch (Exception exception) {
+            logger.log(Level.ERROR,"Servlet has not been destroyed", exception);
         }
 
     }
@@ -84,7 +84,7 @@ public class Controller extends HttpServlet {
             throws IOException, ServletException {
 
         if (result.isRedirect()) {
-            response.sendRedirect("http://localhost:8080/OnlineStore_war_exploded" + PATH + result.getPage());
+            response.sendRedirect("http://localhost:8080/OnlineStore-1.0-SNAPSHOT" + PATH + result.getPage());
 
         } else {
             request.getRequestDispatcher(result.getPage()).forward(request, response);

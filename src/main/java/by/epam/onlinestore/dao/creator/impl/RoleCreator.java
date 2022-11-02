@@ -1,16 +1,16 @@
-package by.epam.onlinestore.dao.mapper.impl;
+package by.epam.onlinestore.dao.creator.impl;
 
 import by.epam.onlinestore.bean.Role;
-import by.epam.onlinestore.dao.mapper.ColumnLabel;
-import by.epam.onlinestore.dao.mapper.Mapper;
+import by.epam.onlinestore.dao.creator.ColumnLabel;
+import by.epam.onlinestore.dao.creator.Creator;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class RoleMapper implements Mapper<Role> {
+public class RoleCreator implements Creator<Role> {
 
     @Override
-    public Role map(ResultSet resultSet) throws SQLException {
+    public Role create(ResultSet resultSet) throws SQLException {
         Role role = new Role();
 
         role.setId(resultSet.getLong(ColumnLabel.ROLE_ID));

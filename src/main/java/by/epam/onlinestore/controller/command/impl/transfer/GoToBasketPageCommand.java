@@ -63,7 +63,7 @@ public class GoToBasketPageCommand implements Command {
 
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Error while going to basket page");
+            logger.log(Level.ERROR, "Error while going to basket page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

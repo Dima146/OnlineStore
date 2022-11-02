@@ -28,7 +28,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
             productCategoryList = productCategoryDao.findAllProductCategory();
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve List of product categories");
+            logger.log(Level.ERROR, "Impossible to retrieve List of product categories", exception);
             throw new ServiceException(exception);
         }
 
@@ -44,7 +44,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
             productCategory = productCategoryDao.findProductCategoryById(productCategoryId);
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve product category by ID");
+            logger.log(Level.ERROR, "Impossible to retrieve product category by ID", exception);
             throw new ServiceException(exception);
         }
 

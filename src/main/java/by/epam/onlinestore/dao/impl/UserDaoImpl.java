@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.TableLabel;
 import by.epam.onlinestore.dao.UserDao;
-import by.epam.onlinestore.dao.mapper.MapperFactory;
+import by.epam.onlinestore.dao.creator.CreatorFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public class UserDaoImpl extends AbstractSqlExecutor<User> implements UserDao {
     private static final String FIND_ALL_USERS = "SELECT * FROM " + TableLabel.USER;
 
     public UserDaoImpl() {
-        super(MapperFactory.getInstance().getUserMapper(), TableLabel.USER);
+        super(CreatorFactory.getInstance().getUserMapper(), TableLabel.USER);
     }
 
 

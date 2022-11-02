@@ -3,8 +3,8 @@ package by.epam.onlinestore.dao.impl;
 import by.epam.onlinestore.bean.Product;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.ProductDao;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPool;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPoolException;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPool;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

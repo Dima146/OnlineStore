@@ -62,7 +62,7 @@ public class GoToViewAllOrdersCommand implements Command {
             requestContext.addRequestAttribute(USER_INFORMATION, userInformation);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Error while viewing orders from users");
+            logger.log(Level.ERROR, "Error while viewing orders from users", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

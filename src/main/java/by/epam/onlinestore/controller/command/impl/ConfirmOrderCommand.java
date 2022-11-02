@@ -78,7 +78,7 @@ public class ConfirmOrderCommand implements Command {
             return new CommandResult(ADD_ORDER_PAGE, CommandResultType.FORWARD);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Error while confirming order");
+            logger.log(Level.ERROR, "Error while confirming order", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
     }

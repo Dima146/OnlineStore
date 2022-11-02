@@ -46,7 +46,7 @@ public class GoToAddOrderPageCommand implements Command {
             requestContext.addRequestAttribute(TOTAL_COST, totalCost);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Error while going to add order page");
+            logger.log(Level.ERROR, "Error while going to add order page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

@@ -1,9 +1,9 @@
 package by.epam.onlinestore.dao;
 
 import by.epam.onlinestore.bean.Bean;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPool;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPoolException;
-import by.epam.onlinestore.dao.mapper.Mapper;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPool;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
+import by.epam.onlinestore.dao.creator.Creator;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -18,10 +18,10 @@ import java.util.Optional;
 public class AbstractSqlExecutor<T extends Bean> {
     private static final Logger logger = LogManager.getLogger(AbstractSqlExecutor.class);
     private final String tableName;
-    private final Mapper<T> tMapper;
+    private final Creator<T> tCreator;
 
-    public AbstractSqlExecutor(Mapper<T> tMapper, String tableName) {
-        this.tMapper = tMapper;
+    public AbstractSqlExecutor(Creator<T> tCreator, String tableName) {
+        this.tCreator = tCreator;
         this.tableName = tableName;
     }
     protected List<T> executeSqlQuery(String query, Object... params) throws DaoException {
@@ -100,7 +100,7 @@ public class AbstractSqlExecutor<T extends Bean> {
         List<T> entities = new ArrayList<>();
         try {
             while (resultSet.next()) {
-                T entity = tMapper.map(resultSet);
+                T entity = tCreator.create(resultSet);
                 entities.add(entity);
             }
         } catch (SQLException exception) {

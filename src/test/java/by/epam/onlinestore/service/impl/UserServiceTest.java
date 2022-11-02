@@ -1,8 +1,8 @@
 package by.epam.onlinestore.service.impl;
 
 import by.epam.onlinestore.bean.User;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPool;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPoolException;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPool;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
 import by.epam.onlinestore.service.ServiceException;
 import by.epam.onlinestore.service.UserService;
 

@@ -1,16 +1,16 @@
-package by.epam.onlinestore.dao.mapper.impl;
+package by.epam.onlinestore.dao.creator.impl;
 
 import by.epam.onlinestore.bean.BankCard;
-import by.epam.onlinestore.dao.mapper.ColumnLabel;
-import by.epam.onlinestore.dao.mapper.Mapper;
+import by.epam.onlinestore.dao.creator.ColumnLabel;
+import by.epam.onlinestore.dao.creator.Creator;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class BankCardMapper implements Mapper<BankCard> {
+public class BankCardCreator implements Creator<BankCard> {
 
     @Override
-    public BankCard map(ResultSet resultSet) throws SQLException {
+    public BankCard create(ResultSet resultSet) throws SQLException {
         BankCard bankCard = new BankCard();
 
         bankCard.setId(resultSet.getLong(ColumnLabel.BANK_CARD_ID));

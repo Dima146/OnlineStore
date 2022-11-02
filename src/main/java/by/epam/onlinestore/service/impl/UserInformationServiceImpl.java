@@ -32,7 +32,7 @@ public class UserInformationServiceImpl implements UserInformationService {
             return userInformation;
 
         } catch (DaoException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve User information by ID");
+            logger.log(Level.ERROR, "Impossible to retrieve User information by ID", exception);
             throw new ServiceException(exception);
         }
 
@@ -52,7 +52,7 @@ public class UserInformationServiceImpl implements UserInformationService {
                 }
             }
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR, "Impossible to retrieve User information from users");
+            logger.log(Level.ERROR, "Impossible to retrieve User information from users", exception);
             throw new ServiceException(exception);
         }
 

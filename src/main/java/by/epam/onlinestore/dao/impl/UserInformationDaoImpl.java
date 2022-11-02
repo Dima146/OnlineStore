@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.TableLabel;
 import by.epam.onlinestore.dao.UserInformationDao;
-import by.epam.onlinestore.dao.mapper.MapperFactory;
+import by.epam.onlinestore.dao.creator.CreatorFactory;
 
 import java.util.Optional;
 
@@ -18,7 +18,7 @@ public class UserInformationDaoImpl extends AbstractSqlExecutor<UserInformation>
 
 
     public UserInformationDaoImpl() {
-        super(MapperFactory.getInstance().getUserInformationMapper(), TableLabel.USER_INFORMATION);
+        super(CreatorFactory.getInstance().getUserInformationMapper(), TableLabel.USER_INFORMATION);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package by.epam.onlinestore.dao.connection;
 
-import by.epam.onlinestore.dao.connectionPool.ConnectionPool;
-import by.epam.onlinestore.dao.connectionPool.ConnectionPoolException;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPool;
+import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.sql.SQLException;

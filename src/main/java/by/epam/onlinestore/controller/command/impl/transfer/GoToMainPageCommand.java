@@ -37,7 +37,7 @@ public class GoToMainPageCommand implements Command {
             requestContext.addRequestAttribute(PRODUCT_CATEGORIES, categories);
 
         } catch (ServiceException exception) {
-            logger.log(Level.ERROR,"Error while going to main page");
+            logger.log(Level.ERROR,"Error while going to main page", exception);
             return new CommandResult(ERROR_PAGE, CommandResultType.FORWARD);
         }
 

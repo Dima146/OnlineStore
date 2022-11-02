@@ -1,16 +1,16 @@
-package by.epam.onlinestore.dao.mapper.impl;
+package by.epam.onlinestore.dao.creator.impl;
 
 import by.epam.onlinestore.bean.User;
-import by.epam.onlinestore.dao.mapper.ColumnLabel;
-import by.epam.onlinestore.dao.mapper.Mapper;
+import by.epam.onlinestore.dao.creator.ColumnLabel;
+import by.epam.onlinestore.dao.creator.Creator;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserMapper implements Mapper<User> {
+public class UserCreator implements Creator<User> {
 
     @Override
-    public User map(ResultSet resultSet) throws SQLException {
+    public User create(ResultSet resultSet) throws SQLException {
         User user = new User();
 
         user.setId(resultSet.getLong(ColumnLabel.USER_ID));

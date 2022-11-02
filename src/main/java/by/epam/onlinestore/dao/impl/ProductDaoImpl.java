@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.ProductDao;
 import by.epam.onlinestore.dao.TableLabel;
-import by.epam.onlinestore.dao.mapper.MapperFactory;
+import by.epam.onlinestore.dao.creator.CreatorFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -28,7 +28,7 @@ public class ProductDaoImpl extends AbstractSqlExecutor<Product> implements Prod
 
 
     public ProductDaoImpl() {
-        super(MapperFactory.getInstance().getProductMapper(), TableLabel.PRODUCT);
+        super(CreatorFactory.getInstance().getProductMapper(), TableLabel.PRODUCT);
     }
 
     @Override
