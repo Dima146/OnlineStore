@@ -1,4 +1,4 @@
-package by.epam.onlinestore.dao.connectionPool;
+package by.epam.onlinestore.dao.connectionpool;
 
 import java.util.ResourceBundle;
 
