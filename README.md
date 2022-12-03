@@ -23,4 +23,7 @@ The **administrator** can add new products or change information about them. Als
 
 • Adding and modifying information (for example: create and edit a product, create and edit an order, etc.)
 
+### Database schema ###
+![](/D:\Главная\IdeaProjectsE\database-schema.png)
+
 
