@@ -21,4 +21,4 @@ The **administrator** can add new products or change information about them. Als
 
 ### Database schema ###
 
-![](D:\IntellijProjects\OnlineStore\src\main\webapp\static\images\database-schema.png)
+<img alt="Image" height="700" src="D:\IntellijProjects\OnlineStore\src\main\webapp\static\images\database-schema.png" title="Image" width="800"/>
