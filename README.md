@@ -13,17 +13,13 @@ The **administrator** can add new products or change information about them. Als
 
 ### Minimum requirements for the functionality of the application ###
 
-• Authorization (sign in) and exit (sign out)
-
+• Authorization (sign in) and exit (sign out)  
 • User registration
-
 • Viewing information (for example: all orders, order statistics, invoices, etc.)
-
 • Removing information (for example: canceling an order, deleting an entity, etc.)
-
 • Adding and modifying information (for example: create and edit a product, create and edit an order, etc.)
 
 ### Database schema ###
-![](/D:\Главная\IdeaProjectsE\database-schema.png)
+
 
 
