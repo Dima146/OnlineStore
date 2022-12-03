@@ -20,5 +20,4 @@ The **administrator** can add new products or change information about them. Als
 • Adding and modifying information (for example: create and edit a product, create and edit an order, etc.)
 
 ### Database schema ###
-
-![](D:\IntellijProjects\OnlineStore\src\main\webapp\static\images\database-schema.png)
+<img height="900" src="D:\IntellijProjects\OnlineStore\src\main\webapp\static\images\database-schema.png" width="900"/>
