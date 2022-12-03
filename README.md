@@ -8,7 +8,9 @@ After **logging in**, there are available the following functions: viewing user 
 The **administrator** can add new products or change information about them. Also, the administrator can view all active user's orders (he can makes his own order too) with their information as well as complete or cancel them.
 
 
+
 **Minimum requirements for the functionality of the application**
+
 • Authorization (sign in) and exit (sign out)
 
 • User registration
