@@ -11,7 +11,7 @@ The **administrator** can add new products or change information about them. Als
 
 
 
-**Minimum requirements for the functionality of the application**
+### Minimum requirements for the functionality of the application ###
 
 • Authorization (sign in) and exit (sign out)
 
