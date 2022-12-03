@@ -5,7 +5,8 @@ Online store system. The administrator maintains a catalogue of goods. The custo
 
 After **logging in**, there are available the following functions: viewing user profile, adding products to user's cart and removing them from it, making and viewing an order.
 
-The **administrator** can add new products or change information about them. Also, the administrator can view all active user's orders (he can makes his own order too) with their information as well as complete or cancel them.
+The **administrator** can add new products or change information about them. Also, the administrator can view all active user's orders (he can makes his own order too) with their information as well as complete or cancel them.  
+
 
 
 
