@@ -2,7 +2,7 @@ package by.epam.onlinestore.dao.impl;
 
 import by.epam.onlinestore.bean.OrderFromUser;
 import by.epam.onlinestore.dao.*;
-import by.epam.onlinestore.dao.creator.CreatorFactory;
+import by.epam.onlinestore.dao.mapper.RowMapperFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public class OrderFromUserDaoImpl extends AbstractSqlExecutor<OrderFromUser> imp
 
 
     public OrderFromUserDaoImpl() {
-        super(CreatorFactory.getInstance().getOrderFromUserMapper(), TableLabel.ORDER_FROM_USER);
+        super(RowMapperFactory.getInstance().getOrderFromUserMapper(), TableLabel.ORDER_FROM_USER);
     }
 
     @Override

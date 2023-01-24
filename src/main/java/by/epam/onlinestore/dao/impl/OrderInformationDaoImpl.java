@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.OrderInformationDao;
 import by.epam.onlinestore.dao.TableLabel;
-import by.epam.onlinestore.dao.creator.CreatorFactory;
+import by.epam.onlinestore.dao.mapper.RowMapperFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public class OrderInformationDaoImpl extends AbstractSqlExecutor<OrderInformatio
                                                                 " WHERE user_order_id=?";
 
     public OrderInformationDaoImpl() {
-        super(CreatorFactory.getInstance().getOrderInformationMapper(), TableLabel.ORDER_INFORMATION);
+        super(RowMapperFactory.getInstance().getOrderInformationMapper(), TableLabel.ORDER_INFORMATION);
     }
 
     @Override

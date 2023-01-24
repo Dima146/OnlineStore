@@ -3,7 +3,7 @@ package by.epam.onlinestore.dao;
 import by.epam.onlinestore.bean.Bean;
 import by.epam.onlinestore.dao.connectionpool.ConnectionPool;
 import by.epam.onlinestore.dao.connectionpool.ConnectionPoolException;
-import by.epam.onlinestore.dao.creator.Creator;
+import by.epam.onlinestore.dao.mapper.RowMapper;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -18,10 +18,10 @@ import java.util.Optional;
 public class AbstractSqlExecutor<T extends Bean> {
     private static final Logger logger = LogManager.getLogger(AbstractSqlExecutor.class);
     private final String tableName;
-    private final Creator<T> tCreator;
+    private final RowMapper<T> tRowMapper;
 
-    public AbstractSqlExecutor(Creator<T> tCreator, String tableName) {
-        this.tCreator = tCreator;
+    public AbstractSqlExecutor(RowMapper<T> tRowMapper, String tableName) {
+        this.tRowMapper = tRowMapper;
         this.tableName = tableName;
     }
     protected List<T> executeSqlQuery(String query, Object... params) throws DaoException {
@@ -100,7 +100,7 @@ public class AbstractSqlExecutor<T extends Bean> {
         List<T> entities = new ArrayList<>();
         try {
             while (resultSet.next()) {
-                T entity = tCreator.create(resultSet);
+                T entity = tRowMapper.create(resultSet);
                 entities.add(entity);
             }
         } catch (SQLException exception) {

@@ -5,7 +5,7 @@ import by.epam.onlinestore.dao.AbstractSqlExecutor;
 import by.epam.onlinestore.dao.DaoException;
 import by.epam.onlinestore.dao.RoleDao;
 import by.epam.onlinestore.dao.TableLabel;
-import by.epam.onlinestore.dao.creator.CreatorFactory;
+import by.epam.onlinestore.dao.mapper.RowMapperFactory;
 
 import java.util.Optional;
 
@@ -16,7 +16,7 @@ public class RoleDaoImpl extends AbstractSqlExecutor<Role> implements RoleDao {
     private static final String FIND_ROLE_BY = "SELECT * FROM " + TableLabel.ROLE + " WHERE role_id=?";
 
     public RoleDaoImpl() {
-        super(CreatorFactory.getInstance().getRoleMapper(), TableLabel.ROLE);
+        super(RowMapperFactory.getInstance().getRoleMapper(), TableLabel.ROLE);
 
     }
 

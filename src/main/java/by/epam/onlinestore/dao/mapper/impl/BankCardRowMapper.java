@@ -1,13 +1,13 @@
-package by.epam.onlinestore.dao.creator.impl;
+package by.epam.onlinestore.dao.mapper.impl;
 
 import by.epam.onlinestore.bean.BankCard;
-import by.epam.onlinestore.dao.creator.ColumnLabel;
-import by.epam.onlinestore.dao.creator.Creator;
+import by.epam.onlinestore.dao.mapper.ColumnLabel;
+import by.epam.onlinestore.dao.mapper.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class BankCardCreator implements Creator<BankCard> {
+public class BankCardRowMapper implements RowMapper<BankCard> {
 
     @Override
     public BankCard create(ResultSet resultSet) throws SQLException {

@@ -1,13 +1,13 @@
-package by.epam.onlinestore.dao.creator.impl;
+package by.epam.onlinestore.dao.mapper.impl;
 
 import by.epam.onlinestore.bean.User;
-import by.epam.onlinestore.dao.creator.ColumnLabel;
-import by.epam.onlinestore.dao.creator.Creator;
+import by.epam.onlinestore.dao.mapper.ColumnLabel;
+import by.epam.onlinestore.dao.mapper.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserCreator implements Creator<User> {
+public class UserRowMapper implements RowMapper<User> {
 
     @Override
     public User create(ResultSet resultSet) throws SQLException {

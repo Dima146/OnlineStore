@@ -1,4 +1,4 @@
-package by.epam.onlinestore.dao.creator;
+package by.epam.onlinestore.dao.mapper;
 
 public class ColumnLabel {
 
