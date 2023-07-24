@@ -1,5 +1,5 @@
 <h2 align="center">Online Store</h2>
-<h4 align="center">Java Web Development (EPAM Systems)\
+<h4 align="center">Java Web Development (EPAM Systems) \
 Final project</h4>
 
 
