@@ -1,14 +1,11 @@
-<h2 align="center">Online Store</h2>
+<h2 align="center">Online Store</h2><br/>
 <h4 align="center">Java Web Development (EPAM Systems)
 
 Final project</h4>
-
-
-
 ### Description
 The online store system. The administrator manages a catalogue of products. The customer makes orders and pays for them.
 
-After creating an account and *logging in*, you can look at the catalogue, managing your shopping cart, making and cancelling your orders, viewing your profile and the store contact information. You can also change the language of the application(EN or RU).
+After creating an account and *logging in* to it, you can look at the catalogue, managing your shopping cart, making and cancelling your orders, viewing your profile and the store contact information. You can also change the language of the application(EN or RU).
 In addition to the same functions as a regular user, the *administrator* has access to the following functions: adding new products to the catalogue and editing information about them, viewing and processing all active orders.
 
 ### General requirements for the project ###
