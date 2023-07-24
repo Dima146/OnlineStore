@@ -1,7 +1,8 @@
-<h2 align="center">Online Store</h2><br/>
+<h2 align="center">Online Store</h2>
 <h4 align="center">Java Web Development (EPAM Systems)
 
 Final project</h4>
+<br/>
 ### Description
 The online store system. The administrator manages a catalogue of products. The customer makes orders and pays for them.
 
