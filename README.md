@@ -11,6 +11,7 @@ In addition to the same functions as a regular user, the *administrator* has acc
 
 ### General requirements for the project ###
 
+
 * Implement an application using Servlet and JSP technologies.
 * Application architecture must conform to *Layered Architecture* and *Model-View-Controller* patterns.
 * The application interface must be internationalized.
